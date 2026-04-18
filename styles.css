@@ -1,0 +1,114 @@
+main {
+    display: grid;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-family: monospace;
+    grid-template-areas: "cardone cardtwo cardthree"
+                         "cardfour cardfour cardfour";
+    justify-self: center;
+    width: 1200px;
+}
+
+.testimonial-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.testimonial-image-square {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+    flex: 1;
+    grid-area: image;
+}
+
+.testimonial-image-square:hover, .testimonial-image:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.card {
+    border: 2.5px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+}
+
+.card:hover {
+    border-color: #333;
+    transition: border-color 0.3s ease;
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.testimonial-text {
+    font-size: 1.5em;
+    margin-top: 15px;
+}
+
+.testimonial-jobtitle {
+    font-size: 0.9em;
+    color: #888;
+    margin-top: 5px;
+}
+
+.testimonial-card-one {
+    grid-area: cardone;
+    width: 300px;
+}
+
+.testimonial-card-two {
+    grid-area: cardtwo;
+
+}
+
+.testimonial-card-three {
+    grid-area: cardthree;
+}
+
+.testimonial-card-four {
+    grid-area: cardfour;
+    display: grid;
+    grid-template-areas: "image text"
+                         "image author"
+                         "image jobtitle";
+    grid-template-rows: 125px 25px 50px;
+    grid-template-columns: auto 1fr;
+    border: 0;
+    box-shadow: none;
+}
+
+.testimonial-card-four:hover {
+    border-color: #333;
+    transition: border-color 0.3s ease;
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.testimonial-text-four {
+    grid-area: text;
+    font-size: 1.5em;
+    margin-left: 20px;
+    margin-top: 50px;
+    color: #000000
+}
+
+.testimonial-author-four {
+    grid-area: author;
+    font-size: 1em;
+    margin-left: 20px;
+    color: #000000;
+
+}
+
+.testimonial-jobtitle-four {
+    grid-area: jobtitle;
+    font-size: 0.9em;
+    margin-left: 20px;
+    color: #000000ad;
+
+}
